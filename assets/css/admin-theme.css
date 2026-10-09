@@ -1,0 +1,311 @@
+:root {
+    --fm-admin-primary: #2563eb;
+    --fm-admin-primary-soft: #dbeafe;
+    --fm-admin-accent: #0f172a;
+    --fm-admin-text: #0f172a;
+    --fm-admin-muted: #475569;
+    --fm-admin-bg: #eef3ff;
+    --fm-admin-surface: #ffffff;
+    --fm-admin-border: #d9e2f7;
+    --fm-admin-shadow: 0 22px 36px -30px rgba(37, 99, 235, 0.5);
+}
+
+@keyframes fmAdminFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.admin-app {
+    --bs-primary: var(--fm-admin-primary);
+    --bs-primary-rgb: 37, 99, 235;
+    --bs-body-color: var(--fm-admin-text);
+    --bs-body-bg: var(--fm-admin-bg);
+    --bs-border-color: var(--fm-admin-border);
+    min-height: 100vh;
+    font-family: "Sora", sans-serif;
+    color: var(--fm-admin-text);
+    background:
+        radial-gradient(circle at 100% 0%, #dbeafe 0, transparent 32%),
+        radial-gradient(circle at 0% 0%, #e2e8ff 0, transparent 40%),
+        var(--fm-admin-bg);
+}
+
+.admin-shell {
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+    border-right: 1px solid rgba(148, 163, 184, 0.24);
+}
+
+.admin-sidebar h5 {
+    color: #f8fafc;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.admin-sidebar .nav-link {
+    border-radius: 11px;
+    color: rgba(226, 232, 240, 0.88);
+    font-weight: 500;
+    padding: 0.52rem 0.72rem;
+    transition: all 0.2s ease;
+}
+
+.admin-sidebar .nav-link:hover {
+    color: #fff;
+    background: rgba(59, 130, 246, 0.22);
+}
+
+.admin-sidebar .nav-link.active {
+    color: #fff;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 10px 24px -18px rgba(37, 99, 235, 0.95);
+}
+
+.admin-sidebar .nav-link.nav-logout {
+    color: #fda4af;
+}
+
+.admin-sidebar .nav-link.nav-logout:hover {
+    background: rgba(244, 63, 94, 0.2);
+    color: #ffe4e6;
+}
+
+.admin-main {
+    max-width: 1320px;
+}
+
+.admin-topbar {
+    border: 1px solid var(--fm-admin-border);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.82);
+    padding: 1rem 1.1rem;
+    margin-bottom: 1.1rem;
+    box-shadow: var(--fm-admin-shadow);
+}
+
+.admin-app h1,
+.admin-app h2,
+.admin-app h3,
+.admin-app h4,
+.admin-app h5,
+.admin-app h6 {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.admin-app p,
+.admin-app small,
+.admin-app .text-muted {
+    color: var(--fm-admin-muted) !important;
+}
+
+.admin-app .card,
+.admin-app .modal-content {
+    border-radius: 16px;
+    border: 1px solid var(--fm-admin-border);
+    background: var(--fm-admin-surface);
+    box-shadow: var(--fm-admin-shadow);
+}
+
+.admin-app .card .card-body {
+    padding: 1.15rem;
+}
+
+.admin-app .admin-topbar,
+.admin-app .card,
+.admin-app .alert {
+    animation: fmAdminFadeUp 0.42s ease both;
+}
+
+.admin-app .btn {
+    border-radius: 11px;
+    font-weight: 600;
+}
+
+.admin-app .btn-primary {
+    border-color: #1d4ed8;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 12px 24px -20px rgba(37, 99, 235, 0.95);
+}
+
+.admin-app .btn-primary:hover,
+.admin-app .btn-primary:focus,
+.admin-app .btn-primary:active {
+    border-color: #1e40af !important;
+    background: #1e40af !important;
+}
+
+.admin-app .btn-outline-primary {
+    border-color: rgba(37, 99, 235, 0.4);
+    color: #1d4ed8;
+}
+
+.admin-app .btn-outline-primary:hover {
+    background: rgba(37, 99, 235, 0.12);
+    border-color: #2563eb;
+    color: #1e40af;
+}
+
+.admin-app .btn-outline-success {
+    border-color: rgba(5, 150, 105, 0.42);
+    color: #047857;
+}
+
+.admin-app .btn-outline-success:hover {
+    background: rgba(5, 150, 105, 0.12);
+    border-color: #047857;
+    color: #065f46;
+}
+
+.admin-app .btn-outline-secondary {
+    border-color: #ccd7ee;
+    color: #334155;
+}
+
+.admin-app .btn-outline-secondary:hover {
+    border-color: #b6c6e8;
+    background: #eef3ff;
+    color: #1e293b;
+}
+
+.admin-app .form-control,
+.admin-app .form-select {
+    border-color: #ccd9f3;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #0f172a;
+}
+
+.admin-app .form-control:focus,
+.admin-app .form-select:focus {
+    border-color: rgba(37, 99, 235, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+.admin-app .table {
+    --bs-table-bg: transparent;
+    --bs-table-striped-bg: #eff4ff;
+    --bs-table-hover-bg: #e8efff;
+    margin-bottom: 0;
+}
+
+.admin-app .table > :not(caption) > * > * {
+    border-bottom-color: #d9e2f7;
+    vertical-align: middle;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.admin-app .table thead th {
+    border-bottom-width: 1px;
+    color: #334155;
+    font-size: 0.77rem;
+    text-transform: uppercase;
+    letter-spacing: 0.045em;
+}
+
+.admin-app .list-group-item {
+    border-color: #d9e2f6;
+}
+
+.admin-app .alert {
+    border-radius: 12px;
+}
+
+.admin-app .alert-success {
+    color: #065f46;
+    background-color: #d1fae5;
+    border-color: #a7f3d0;
+}
+
+.admin-app .alert-danger {
+    color: #991b1b;
+    background-color: #fee2e2;
+    border-color: #fecaca;
+}
+
+.admin-app .alert-warning {
+    color: #7c2d12;
+    background-color: #ffedd5;
+    border-color: #fed7aa;
+}
+
+.admin-app .alert-secondary {
+    color: #334155;
+    background-color: #eef2ff;
+    border-color: #dbe4ff;
+}
+
+.admin-app .badge.text-bg-primary {
+    background-color: #2563eb !important;
+}
+
+.admin-app pre {
+    margin-bottom: 0;
+    padding: 0.85rem;
+    border: 1px solid #d8e3fa;
+    border-radius: 10px;
+    background: #f7f9ff;
+    color: #1e293b;
+}
+
+.admin-app details summary {
+    cursor: pointer;
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+.admin-app #restaurantMap,
+.admin-app #addressMap,
+.admin-app #liveMap {
+    border: 1px solid #ccdaf7;
+    border-radius: 12px !important;
+}
+
+body.admin-auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-auth-shell {
+    max-width: 430px;
+}
+
+.admin-auth-card {
+    border: 1px solid #d4def8;
+}
+
+@media (max-width: 991.98px) {
+    .admin-sidebar {
+        min-height: auto;
+        position: static;
+    }
+
+    .admin-main {
+        padding-top: 1rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .admin-topbar {
+        padding: 0.8rem;
+    }
+
+    .admin-app .card .card-body {
+        padding: 1rem;
+    }
+}

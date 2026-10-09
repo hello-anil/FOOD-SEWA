@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-05-21T00:00:00.000Z" agent="Codex" version="26.0.0" type="device">
+  <diagram id="food-sewa-schema" name="FOOD SEWA Database Schema">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;FOOD SEWA Database Schema&lt;/b&gt;&lt;br&gt;deliver database | MySQL InnoDB | editable draw.io diagram" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=22;fontColor=#16233a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="760" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="table_addresses" value="&lt;b&gt;addresses&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;FK user_id&lt;br&gt;full_name&lt;br&gt;phone&lt;br&gt;address_name&lt;br&gt;address_line&lt;br&gt;address_line_1&lt;br&gt;address_line_2&lt;br&gt;city&lt;br&gt;zone&lt;br&gt;area&lt;br&gt;landmark&lt;br&gt;lat&lt;br&gt;lng&lt;br&gt;is_default&lt;br&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#1f4e79;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="930" y="80" width="240" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="table_admins" value="&lt;b&gt;admins&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;name&lt;br&gt;email&lt;br&gt;password_hash&lt;br&gt;status&lt;br&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#666f7a;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="350" y="80" width="220" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="table_carts" value="&lt;b&gt;carts&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;FK user_id&lt;br&gt;session_id&lt;br&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#2f75b5;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="350" y="325" width="230" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="table_cart_items" value="&lt;b&gt;cart_items&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;FK cart_id&lt;br&gt;FK food_id&lt;br&gt;qty&lt;br&gt;price_snapshot" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#c55a11;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="350" y="585" width="230" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="table_categories" value="&lt;b&gt;categories&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;name&lt;br&gt;status&lt;br&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#548235;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="355" width="230" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="table_coupons" value="&lt;b&gt;coupons&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;code&lt;br&gt;discount_percent&lt;br&gt;max_uses&lt;br&gt;used_count&lt;br&gt;FK user_id&lt;br&gt;expires_at&lt;br&gt;status&lt;br&gt;type&lt;br&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#9e480e;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="350" y="900" width="230" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="table_coupon_usage" value="&lt;b&gt;coupon_usage&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;FK coupon_id&lt;br&gt;FK user_id&lt;br&gt;FK order_id&lt;br&gt;used_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#c55a11;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="645" y="920" width="230" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="table_foods" value="&lt;b&gt;foods&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;FK category_id&lt;br&gt;name&lt;br&gt;description&lt;br&gt;price&lt;br&gt;stock_qty&lt;br&gt;image_path&lt;br&gt;status&lt;br&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#548235;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="570" width="230" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="table_orders" value="&lt;b&gt;orders&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;FK user_id&lt;br&gt;FK address_id&lt;br&gt;order_code&lt;br&gt;total_amount&lt;br&gt;payment_status&lt;br&gt;delivery_status&lt;br&gt;tracking_number&lt;br&gt;delivery_start_at&lt;br&gt;delivered_at&lt;br&gt;late_coupon_generated&lt;br&gt;refund_required&lt;br&gt;refund_note&lt;br&gt;FK coupon_id&lt;br&gt;discount_percent&lt;br&gt;discount_amount&lt;br&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#7030a0;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="930" y="365" width="250" height="295" as="geometry" />
+        </mxCell>
+        <mxCell id="table_order_items" value="&lt;b&gt;order_items&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;FK order_id&lt;br&gt;FK food_id&lt;br&gt;name_snapshot&lt;br&gt;price_snapshot&lt;br&gt;qty" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#c55a11;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="930" y="830" width="250" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="table_payments" value="&lt;b&gt;payments&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;FK order_id&lt;br&gt;gateway&lt;br&gt;amount&lt;br&gt;status&lt;br&gt;txn_ref&lt;br&gt;raw_response&lt;br&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#7030a0;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="930" y="1120" width="250" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="table_system_settings" value="&lt;b&gt;system_settings&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;setting_key&lt;br&gt;setting_value&lt;br&gt;created_at&lt;br&gt;updated_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#666f7a;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1260" width="230" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="table_users" value="&lt;b&gt;users&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;full_name&lt;br&gt;email&lt;br&gt;phone&lt;br&gt;password_hash&lt;br&gt;status&lt;br&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#1f4e79;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="230" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="table_wishlists" value="&lt;b&gt;wishlists&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;FK user_id&lt;br&gt;session_id&lt;br&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#2f75b5;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="645" y="325" width="230" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="table_wishlist_items" value="&lt;b&gt;wishlist_items&lt;/b&gt;&lt;br&gt;&lt;hr size='1'&gt;&lt;br&gt;PK id&lt;br&gt;FK wishlist_id&lt;br&gt;FK food_id&lt;br&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=8;strokeColor=#25364a;fillColor=#ffffff;fontSize=12;fontColor=#1d2733;swimlaneFillColor=#c55a11;startSize=32;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="645" y="585" width="230" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_1_users_addresses_user_id" value="user_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_users" target="table_addresses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_2_users_carts_user_id" value="user_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_users" target="table_carts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_3_carts_cart_items_cart_id" value="cart_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_carts" target="table_cart_items">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_4_foods_cart_items_food_id" value="food_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_foods" target="table_cart_items">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_5_users_coupons_user_id" value="user_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_users" target="table_coupons">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_6_coupons_coupon_usage_coupon_id" value="coupon_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_coupons" target="table_coupon_usage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_7_orders_coupon_usage_order_id" value="order_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_orders" target="table_coupon_usage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_8_users_coupon_usage_user_id" value="user_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_users" target="table_coupon_usage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_9_categories_foods_category_id" value="category_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_categories" target="table_foods">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_10_addresses_orders_address_id" value="address_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_addresses" target="table_orders">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_11_coupons_orders_coupon_id" value="coupon_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_coupons" target="table_orders">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_12_users_orders_user_id" value="user_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_users" target="table_orders">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_13_foods_order_items_food_id" value="food_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_foods" target="table_order_items">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_14_orders_order_items_order_id" value="order_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_orders" target="table_order_items">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_15_orders_payments_order_id" value="order_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_orders" target="table_payments">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_16_users_wishlists_user_id" value="user_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_users" target="table_wishlists">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_17_foods_wishlist_items_food_id" value="food_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_foods" target="table_wishlist_items">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fk_18_wishlists_wishlist_items_wishlist_id" value="wishlist_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#6f8193;fontSize=10;fontColor=#314255;labelBackgroundColor=#eef3f8;" edge="1" parent="1" source="table_wishlists" target="table_wishlist_items">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="&lt;b&gt;Legend&lt;/b&gt;&lt;br&gt;PK = Primary Key, FK = Foreign Key&lt;br&gt;Arrows point from parent tables to child tables using the labelled FK column." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;spacing=10;fillColor=#f8fafc;strokeColor=#c8d2dd;fontSize=12;fontColor=#314255;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1440" width="1140" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

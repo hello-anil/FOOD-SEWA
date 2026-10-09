@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+*.local.sql
+node_modules/
+test-results/
+/screenshots/
+.docx_render_check/
+.playwright-cli/
+output/playwright/
+__pycache__/
+*.pyc
+uploads/.route_cache_*.json
+uploads/.ratelimit/

@@ -1,0 +1,4 @@
+# Disable script execution in uploads
+php_flag engine off
+Options -ExecCGI
+AddType text/plain .php .php3 .php4 .php5 .phtml .phar

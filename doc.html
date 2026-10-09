@@ -1,0 +1,1002 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Report - FOOD SEWA</title>
+<style>
+body {
+    margin: 0;
+    padding: 24px 0;
+    background: #dde3e7;
+    color: #111;
+    font-family: "Times New Roman", serif;
+}
+
+.page {
+    width: 595.3pt;
+    min-height: 841.9pt;
+    margin: 0 auto 20px auto;
+    padding: 72pt 72pt 72pt 90pt;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.page-break {
+    page-break-before: always;
+}
+
+p.MsoNormal,
+div.MsoNormal,
+li.MsoNormal,
+p.MsoBodyText,
+div.MsoBodyText,
+li.MsoBodyText {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 8pt;
+    margin-left: 0;
+    font-size: 12pt;
+    line-height: 150%;
+    text-align: justify;
+}
+
+h1 {
+    margin: 0 0 12pt 0;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+h2 {
+    margin: 18pt 0 10pt 0;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 14pt 0 8pt 0;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+h4 {
+    margin: 12pt 0 6pt 0;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.right {
+    text-align: right !important;
+}
+
+.small {
+    font-size: 11pt;
+}
+
+.tiny {
+    font-size: 10pt;
+}
+
+.spacer-xs {
+    height: 10pt;
+}
+
+.spacer-sm {
+    height: 20pt;
+}
+
+.spacer-md {
+    height: 36pt;
+}
+
+.spacer-lg {
+    height: 54pt;
+}
+
+.cover-title {
+    font-size: 16pt;
+    font-weight: bold;
+    letter-spacing: 0.2pt;
+}
+
+.cover-subtitle {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.toc-title {
+    margin-top: 12pt;
+    margin-bottom: 18pt;
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.toc-entry {
+    margin: 0 0 5pt 0;
+    font-size: 12pt;
+    line-height: 150%;
+}
+
+.toc-entry a {
+    color: #111;
+    text-decoration: none;
+}
+
+.toc-level-2 {
+    padding-left: 14pt;
+}
+
+.toc-level-3 {
+    padding-left: 28pt;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8pt 0 12pt 0;
+    font-size: 11pt;
+}
+
+.report-table th,
+.report-table td {
+    border: 1px solid #000;
+    padding: 6pt 7pt;
+    vertical-align: top;
+    line-height: 140%;
+}
+
+.report-table th {
+    text-align: left;
+    background: #f3f3f3;
+}
+
+.signature-table td {
+    height: 90pt;
+    text-align: center;
+    vertical-align: bottom;
+    font-weight: bold;
+}
+
+.caption {
+    margin-top: 4pt;
+    margin-bottom: 10pt;
+    text-align: center;
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.figure-diagram {
+    border: 1px solid #000;
+    padding: 12pt;
+    margin: 8pt 0 6pt 0;
+}
+
+.flow-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8pt;
+    margin-bottom: 8pt;
+    flex-wrap: wrap;
+}
+
+.flow-box {
+    min-width: 120pt;
+    max-width: 180pt;
+    padding: 8pt 10pt;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 11pt;
+    line-height: 130%;
+    background: #fafafa;
+}
+
+.flow-arrow {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.note-box {
+    border: 1px solid #000;
+    padding: 8pt 10pt;
+    margin: 8pt 0 12pt 0;
+    background: #fcfcfc;
+}
+
+.algorithm {
+    margin: 6pt 0 12pt 0;
+    padding: 8pt 10pt;
+    border: 1px solid #000;
+    background: #f7f7f7;
+    font-family: "Courier New", monospace;
+    font-size: 10.5pt;
+    line-height: 145%;
+    white-space: pre-wrap;
+}
+
+ul.report-list,
+ol.report-list {
+    margin-top: 0;
+    margin-bottom: 10pt;
+    padding-left: 22pt;
+    line-height: 150%;
+    font-size: 12pt;
+}
+
+code {
+    font-family: "Courier New", monospace;
+    font-size: 10.5pt;
+}
+
+@media print {
+    body {
+        background: #fff;
+        padding: 0;
+    }
+
+    .page {
+        box-shadow: none;
+        margin: 0 auto;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+    <p class="MsoNormal center"><img src="data:image/png;base64,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" width="84" height="85" alt="University logo"></p>
+    <div class="spacer-sm"></div>
+    <p class="MsoNormal center"><b>Tribhuvan University</b></p>
+    <p class="MsoNormal center"><b>Faculty of Humanities and Social Science</b></p>
+    <div class="spacer-md"></div>
+    <p class="MsoNormal center cover-subtitle">A PROJECT REPORT ON</p>
+    <div class="spacer-sm"></div>
+    <p class="MsoNormal center cover-title">FOOD SEWA</p>
+    <p class="MsoNormal center cover-subtitle">(Previously Foodmandu)</p>
+    <div class="spacer-md"></div>
+    <p class="MsoNormal center cover-subtitle">Submitted to</p>
+    <p class="MsoNormal center"><b>Department of Computer Application</b></p>
+    <p class="MsoNormal center"><b>Samriddhi College</b></p>
+    <div class="spacer-sm"></div>
+    <p class="MsoNormal center"><b><i>In partial fulfillment of the requirements for the degree of Bachelors in Computer Application</i></b></p>
+    <div class="spacer-md"></div>
+    <p class="MsoNormal center cover-subtitle">Submitted by</p>
+    <p class="MsoNormal center">Anil Prajapati [111302128]</p>
+    <p class="MsoNormal center">Rohit Dangol [111302142]</p>
+    <div class="spacer-md"></div>
+    <p class="MsoNormal center">Under the Supervision of</p>
+    <p class="MsoNormal center"><b>Mr. Jeeban Dhungel</b></p>
+    <div class="spacer-lg"></div>
+    <p class="MsoNormal center">April, 2026</p>
+</div>
+
+<div class="page page-break">
+    <div class="spacer-md"></div>
+    <h1 id="supervisor-recommendation">Supervisor's Recommendation</h1>
+    <div class="spacer-sm"></div>
+    <p class="MsoBodyText">I hereby recommend that this project prepared under my supervision by Anil Prajapati and Rohit Dangol entitled <b>"FOOD SEWA"</b> in partial fulfillment of the requirements for the degree of Bachelor in Computer Application be accepted for final evaluation. The report has been revised against the actual codebase and documents the implemented modules, runtime behavior, and algorithms used in the system.</p>
+    <p class="MsoBodyText">The work demonstrates a functional PHP/MySQL food ordering platform with user and admin panels, secure authentication, payment gateway integration, route-based delivery tracking, and a delayed-delivery coupon mechanism. The project was previously known as Foodmandu and is now presented under the FOOD SEWA name throughout the documentation.</p>
+    <div class="spacer-lg"></div>
+    <p class="MsoNormal"><b>SIGNATURE</b></p>
+    <p class="MsoNormal">Mr. Jeeban Dhungel</p>
+    <p class="MsoNormal"><b>SUPERVISOR</b></p>
+    <p class="MsoNormal">Program Coordinator, BCA</p>
+    <p class="MsoNormal">Samriddhi College</p>
+    <p class="MsoNormal">Lokanthali-16, Bhaktapur</p>
+</div>
+
+<div class="page page-break">
+    <div class="spacer-md"></div>
+    <h1 id="approval-letter">Letter of Approval</h1>
+    <div class="spacer-sm"></div>
+    <p class="MsoBodyText">This is to certify that this project prepared by <b>ANIL PRAJAPATI</b> and <b>ROHIT DANGOL</b> entitled <b>"FOOD SEWA"</b> in partial fulfillment of the requirements for the degree of Bachelor in Computer Application has been evaluated. In our opinion, it is satisfactory in scope and quality as a project report, and it accurately reflects the modules and algorithms implemented in the submitted repository.</p>
+
+    <table class="report-table signature-table">
+        <tr>
+            <td>
+                Mr. Abisek<br>
+                Supervisor<br>
+                Samriddhi College<br>
+                Lokanthali-16, Bhaktapur
+            </td>
+            <td>
+                Mr. Jeeban Dhungel<br>
+                Coordinator<br>
+                Samriddhi College<br>
+                Lokanthali-16, Bhaktapur
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ____________________<br>
+                Internal Examiner
+            </td>
+            <td>
+                ____________________<br>
+                External Examiner
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="page page-break">
+    <h1 id="abstract">Abstract</h1>
+    <p class="MsoBodyText">This report presents the analysis of the FOOD SEWA project based on the actual PHP codebase found in the repository. The application was previously branded as Foodmandu and is now documented as FOOD SEWA across its public and admin interfaces. The system is a web-based food ordering and delivery platform built with plain PHP, MySQL, Bootstrap, Leaflet, and third-party payment APIs.</p>
+    <p class="MsoBodyText">The application supports customer registration and login, category-based food browsing, guest and authenticated carts, wishlist management, address saving through text input or map pinning, checkout with coupon support, and payment processing through Stripe, eSewa, and Khalti. The admin panel provides category and food management, user status control, payment log review, delivery status management, coupon administration, and runtime restaurant-coordinate configuration.</p>
+    <p class="MsoBodyText">The most significant technical contribution of the project lies in its applied algorithms: file-based rate limiting, session timeout enforcement, guest-state merge after login, coupon eligibility checks, unique order and tracking code generation, transactional payment verification with stock deduction, validated delivery-state transitions, route caching with OSRM fallback, Haversine distance estimation, interpolation of rider position along a route, and delayed-delivery coupon claiming. The platform also separates public and owner tracking views to protect customer location privacy.</p>
+    <p class="MsoBodyText"><b>Keywords:</b> Food delivery, PHP, MySQL, Stripe, eSewa, Khalti, OSRM, Haversine distance, live tracking, coupon logic, session security.</p>
+</div>
+
+<div class="page page-break">
+    <h1 id="acknowledgement">Acknowledgement</h1>
+    <p class="MsoBodyText">We express our sincere gratitude to our project supervisor and academic mentors for their guidance, review, and encouragement throughout the preparation of this project. Their feedback was especially valuable in improving both the implementation and the documentation of the system.</p>
+    <p class="MsoBodyText">We are equally thankful to the Department of Computer Application at Samriddhi College, Tribhuvan University, for providing the academic environment in which this project could be completed. We also appreciate the support of our classmates, friends, and family members whose encouragement helped sustain the work from design to implementation.</p>
+    <p class="MsoBodyText">This HTML report was prepared after analyzing the actual repository, database dump, configuration files, and payment/tracking modules so that the project documentation matches the implemented system rather than a generic food-delivery template.</p>
+    <p class="MsoBodyText"><b>Anil Prajapati</b></p>
+    <p class="MsoBodyText"><b>Rohit Dangol</b></p>
+</div>
+
+<div class="page page-break">
+    <div class="toc-title">Table of Contents</div>
+    <p class="toc-entry"><a href="#abstract">Abstract</a></p>
+    <p class="toc-entry"><a href="#acknowledgement">Acknowledgement</a></p>
+    <p class="toc-entry"><a href="#abbreviations">List of Abbreviations</a></p>
+    <p class="toc-entry"><a href="#figures">List of Figures</a></p>
+    <p class="toc-entry"><a href="#tables">List of Tables</a></p>
+    <p class="toc-entry"><a href="#chapter-1">Chapter 1: Introduction</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-1-1">1.1 Introduction</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-1-2">1.2 Problem Statement</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-1-3">1.3 Objectives</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-1-4">1.4 Scope and Limitations</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-1-5">1.5 Report Organization</a></p>
+    <p class="toc-entry"><a href="#chapter-2">Chapter 2: Background Study and Literature Review</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-2-1">2.1 Background Study</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-2-2">2.2 Repository-Specific Gap Analysis</a></p>
+    <p class="toc-entry"><a href="#chapter-3">Chapter 3: System Analysis and Design</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-3-1">3.1 Requirement Analysis</a></p>
+    <p class="toc-entry toc-level-3"><a href="#section-3-1-1">3.1.1 Functional Requirements</a></p>
+    <p class="toc-entry toc-level-3"><a href="#section-3-1-2">3.1.2 Non-Functional Requirements</a></p>
+    <p class="toc-entry toc-level-3"><a href="#section-3-1-3">3.1.3 Feasibility Analysis</a></p>
+    <p class="toc-entry toc-level-3"><a href="#section-3-1-4">3.1.4 Data Modelling</a></p>
+    <p class="toc-entry toc-level-3"><a href="#section-3-1-5">3.1.5 Process Modelling</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-3-2">3.2 System Design</a></p>
+    <p class="toc-entry toc-level-3"><a href="#section-3-2-1">3.2.1 Module Breakdown</a></p>
+    <p class="toc-entry toc-level-3"><a href="#section-3-2-2">3.2.2 Architectural Design</a></p>
+    <p class="toc-entry toc-level-3"><a href="#section-3-2-3">3.2.3 Database Schema Summary</a></p>
+    <p class="toc-entry toc-level-3"><a href="#section-3-2-4">3.2.4 Interface Design</a></p>
+    <p class="toc-entry toc-level-3"><a href="#section-3-2-5">3.2.5 Algorithms Used in the Project</a></p>
+    <p class="toc-entry"><a href="#chapter-4">Chapter 4: Implementation and Testing</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-4-1">4.1 Implementation</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-4-2">4.2 Testing</a></p>
+    <p class="toc-entry"><a href="#chapter-5">Chapter 5: Conclusion and Future Recommendations</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-5-1">5.1 Outcomes</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-5-2">5.2 Conclusion</a></p>
+    <p class="toc-entry toc-level-2"><a href="#section-5-3">5.3 Future Recommendations</a></p>
+    <p class="toc-entry"><a href="#references">References</a></p>
+    <p class="toc-entry"><a href="#appendices">Appendices</a></p>
+</div>
+<div class="page page-break">
+    <h1 id="abbreviations">List of Abbreviations</h1>
+    <table class="report-table">
+        <tr><th>Abbreviation</th><th>Meaning</th></tr>
+        <tr><td>API</td><td>Application Programming Interface</td></tr>
+        <tr><td>CRUD</td><td>Create, Read, Update, Delete</td></tr>
+        <tr><td>CSRF</td><td>Cross-Site Request Forgery</td></tr>
+        <tr><td>ETA</td><td>Estimated Time of Arrival</td></tr>
+        <tr><td>HMAC</td><td>Hash-based Message Authentication Code</td></tr>
+        <tr><td>OSRM</td><td>Open Source Routing Machine</td></tr>
+        <tr><td>NPR</td><td>Nepalese Rupee</td></tr>
+        <tr><td>UI</td><td>User Interface</td></tr>
+        <tr><td>DBMS</td><td>Database Management System</td></tr>
+        <tr><td>TTL</td><td>Time to Live</td></tr>
+    </table>
+
+    <h1 id="figures">List of Figures</h1>
+    <p class="MsoNormal">Figure 1: Client-Server Architecture of FOOD SEWA</p>
+    <p class="MsoNormal">Figure 2: Checkout, Payment, and Order Confirmation Flow</p>
+    <p class="MsoNormal">Figure 3: Delivery Tracking and Delayed-Coupon Claim Flow</p>
+
+    <h1 id="tables">List of Tables</h1>
+    <p class="MsoNormal">Table 1: Software Stack Used in the Project</p>
+    <p class="MsoNormal">Table 2: Functional Modules Implemented in the Repository</p>
+    <p class="MsoNormal">Table 3: Core Database Tables in <code>deliver.sql</code></p>
+    <p class="MsoNormal">Table 4: Security and Validation Controls</p>
+    <p class="MsoNormal">Table 5: Representative Functional Test Cases</p>
+    <p class="MsoNormal">Table 6: Representative Integration Test Cases</p>
+</div>
+
+<div class="page page-break">
+    <h1 id="chapter-1">Chapter 1: Introduction</h1>
+
+    <h2 id="section-1-1">1.1 Introduction</h2>
+    <p class="MsoBodyText">FOOD SEWA is a web-based food delivery system that was previously known as Foodmandu. The repository contains a full-stack PHP application with separate user and admin interfaces, a MySQL database dump, shared business-logic helpers, and payment/tracking integrations. The application is designed for customers who browse foods, manage carts and wishlists, save delivery addresses, make online payments, and monitor order progress after checkout.</p>
+    <p class="MsoBodyText">Unlike a static academic prototype, the codebase implements concrete operational logic: guest-state persistence through cookies, order creation inside database transactions, payment verification against gateway responses, stock deduction only after verified payment, dynamic delivery-state progression, and route-based tracking payloads derived from restaurant and customer coordinates. This report therefore focuses on the implemented behavior observed in the repository rather than on generic food-delivery assumptions.</p>
+    <p class="MsoBodyText">The system supports two authenticated roles in code: <b>admin</b> and <b>user</b>. It also supports a <b>public tracking viewer</b> who can inspect delivery status using a tracking number but cannot access route-sensitive owner details. This limited but deliberate role model is more accurate than the broader multi-actor claims found in some generic report templates.</p>
+
+    <h2 id="section-1-2">1.2 Problem Statement</h2>
+    <p class="MsoBodyText">Traditional food ordering is slow, difficult to audit, and inconvenient for both customers and operators. Phone-based ordering lacks structured menus, real-time availability checks, verified payment handling, and consistent delivery status updates. At the same time, many academic demo systems describe features such as live tracking or compensation logic without implementing the required algorithms in code.</p>
+    <p class="MsoBodyText">The repository addresses these problems by combining menu management, checkout validation, coupon logic, gateway-based payment verification, delivery-state control, and simulated live route tracking in a single PHP application. The delayed-delivery coupon flow is especially important because it is not a visual-only feature: it relies on elapsed-time checks, ownership validation, duplicate-prevention logic, and coupon generation with unique codes.</p>
+
+    <h2 id="section-1-3">1.3 Objectives</h2>
+    <ol class="report-list">
+        <li>To build a functioning PHP/MySQL food ordering platform with user and admin panels.</li>
+        <li>To manage categories, foods, stock quantity, user status, coupons, payments, and delivery status from an admin dashboard.</li>
+        <li>To provide customer-side flows for registration, login, address management, cart handling, wishlist handling, checkout, payment, and order history.</li>
+        <li>To integrate Stripe, eSewa, and Khalti payment gateways with verification logic rather than simple redirection.</li>
+        <li>To implement route-aware delivery tracking, privacy-aware public tracking output, and delayed-delivery coupon claims.</li>
+        <li>To document the real algorithms used in the repository and map them to their source files.</li>
+    </ol>
+
+    <h2 id="section-1-4">1.4 Scope and Limitations</h2>
+    <p class="MsoBodyText"><b>Scope:</b> the codebase includes a public storefront, user authentication and account management, address capture using text or map coordinates, order placement, multi-gateway payment initiation and verification, live tracking simulation, coupon management, user support tickets, and admin-side management of orders, users, payments, foods, categories, coupons, and restaurant coordinates.</p>
+    <p class="MsoBodyText"><b>Limitations:</b> the repository does not implement a separate restaurant-owner role, a delivery-rider login role, ratings/reviews, advanced search/sorting, webhook-based asynchronous payment updates, or real rider GPS capture. Tracking is calculated from route progress and time, not from a real rider device. Support tickets are created at runtime if the table is missing, but there is no admin-side support ticket dashboard in the current code.</p>
+
+    <h2 id="section-1-5">1.5 Report Organization</h2>
+    <p class="MsoBodyText">Chapter 1 introduces the project, its objectives, and its constraints. Chapter 2 places the repository in the food-delivery domain and highlights the difference between generic report claims and the actual implementation. Chapter 3 documents requirements, system design, database structure, and the exact algorithms used in the code. Chapter 4 summarizes the implementation stack and presents representative test scenarios. Chapter 5 concludes the analysis and proposes practical next steps for improving the system.</p>
+</div>
+
+<div class="page page-break">
+    <h1 id="chapter-2">Chapter 2: Background Study and Literature Review</h1>
+
+    <h2 id="section-2-1">2.1 Background Study</h2>
+    <p class="MsoBodyText">A modern food-delivery platform typically requires more than a storefront. At minimum, it must support identity management, product visibility, cart persistence, order capture, payment confirmation, fulfillment tracking, and post-order support. This repository addresses those concerns using a classic server-rendered architecture. Pages are implemented with plain PHP, Bootstrap-based markup, and JavaScript polling where near-real-time updates are required.</p>
+    <p class="MsoBodyText">The project also reflects a common local-development deployment style in Nepalese academic projects: Laragon for Apache and MySQL, phpMyAdmin-based data dumps, and payment integration against sandbox or test APIs. The repository demonstrates that even without a heavyweight framework, an application can still apply transactional integrity, route caching, secure password hashing, CSRF tokens, and delivery-state validation.</p>
+
+    <h2 id="section-2-2">2.2 Repository-Specific Gap Analysis</h2>
+    <p class="MsoBodyText">Many academic reports describe broad features such as "real-time tracking", "multiple payment systems", or "delayed compensation" without linking them to concrete code. In this repository, those features are implemented and traceable. The following table summarizes the difference between generic expectations and the observed implementation.</p>
+
+    <table class="report-table">
+        <tr>
+            <th>Area</th>
+            <th>Generic Claim</th>
+            <th>Observed Implementation in Repository</th>
+        </tr>
+        <tr>
+            <td>Authentication</td>
+            <td>Basic login/register pages</td>
+            <td>Password hashing with <code>password_hash</code>, <code>password_verify</code>, CSRF protection, file-based rate limiting, idle and absolute session timeout.</td>
+        </tr>
+        <tr>
+            <td>Cart Persistence</td>
+            <td>Guest or logged-in cart</td>
+            <td>Guest cart and wishlist persisted by <code>guest_session_id</code> cookie and merged into the user account after successful login/registration.</td>
+        </tr>
+        <tr>
+            <td>Payments</td>
+            <td>Gateway redirection only</td>
+            <td>Stripe session verification, Khalti lookup verification, eSewa status verification, amount checks, ownership checks, and duplicate transaction guards.</td>
+        </tr>
+        <tr>
+            <td>Tracking</td>
+            <td>Static order status page</td>
+            <td>Route lookup through OSRM, Haversine fallback estimation, 5-second browser polling, rider interpolation along a polyline, and public/private payload shaping.</td>
+        </tr>
+        <tr>
+            <td>Compensation</td>
+            <td>Late-delivery coupon mentioned in report</td>
+            <td>Explicit claim-based late coupon generation with elapsed-time checks, duplicate-prevention, user ownership validation, and one-time private coupon issuance.</td>
+        </tr>
+    </table>
+</div>
+
+<div class="page page-break">
+    <h1 id="chapter-3">Chapter 3: System Analysis and Design</h1>
+
+    <h2 id="section-3-1">3.1 Requirement Analysis</h2>
+
+    <h3 id="section-3-1-1">3.1.1 Functional Requirements</h3>
+    <table class="report-table" id="table-2">
+        <tr>
+            <th>Actor</th>
+            <th>Functions Implemented</th>
+        </tr>
+        <tr>
+            <td>User</td>
+            <td>Register, log in, browse foods by category, add/update/remove cart items, use wishlist, save addresses, apply coupons, place order, choose payment gateway, view order history, track order, claim late coupon, edit profile, change password, submit support ticket.</td>
+        </tr>
+        <tr>
+            <td>Admin</td>
+            <td>Log in, review dashboard statistics, manage categories, manage foods and upload images, inspect orders, manage delivery status, inspect payment history, create/disable coupons, update user status, set restaurant coordinates.</td>
+        </tr>
+        <tr>
+            <td>Public Viewer</td>
+            <td>Track an order by tracking number without seeing owner-only route details, customer coordinates, or coupon-claim metadata.</td>
+        </tr>
+    </table>
+
+    <h3 id="section-3-1-2">3.1.2 Non-Functional Requirements</h3>
+    <table class="report-table" id="table-4">
+        <tr><th>Category</th><th>Observed Design Choice</th></tr>
+        <tr><td>Security</td><td>Passwords are hashed with bcrypt; all mutating forms use CSRF tokens; login and registration flows are rate limited; sessions expire by idle and absolute timeout.</td></tr>
+        <tr><td>Reliability</td><td>Order creation, payment success handling, coupon claiming, and default-address updates use database transactions where consistency matters.</td></tr>
+        <tr><td>Maintainability</td><td>Business logic is centralized in <code>components/functions.php</code>, security helpers in <code>components/helpers.php</code>, and access guards in <code>components/guards.php</code>.</td></tr>
+        <tr><td>Usability</td><td>Bootstrap layouts support desktop and mobile usage; map components use Leaflet; forms provide validation feedback through server-side error messages.</td></tr>
+        <tr><td>Performance</td><td>Route responses are cached in-memory and on disk for six hours; tracking polling is limited to every five seconds in the UI; public tracking AJAX requests are rate limited.</td></tr>
+    </table>
+
+    <h3 id="section-3-1-3">3.1.3 Feasibility Analysis</h3>
+    <p class="MsoBodyText"><b>Technical feasibility:</b> the system uses a stack already available in the local environment: Apache, PHP, MySQL, Bootstrap, and cURL-based API access. No framework dependency is required. External services are limited to payment APIs, OpenStreetMap tiles, and OSRM routing.</p>
+    <p class="MsoBodyText"><b>Operational feasibility:</b> the system matches a straightforward operating model where a single admin manages catalog and delivery states, while users complete orders and track them online. This fits both academic demonstration and small-scale deployment scenarios.</p>
+    <p class="MsoBodyText"><b>Economic feasibility:</b> the application uses open-source tools and a simple server-rendered architecture. Development and hosting costs are low compared with a microservice or mobile-first architecture. The main recurring cost in production would come from payment, routing, and notification services.</p>
+
+    <h3 id="section-3-1-4">3.1.4 Data Modelling</h3>
+    <p class="MsoBodyText">The repository ships with <code>deliver.sql</code>, which defines 15 core tables. In addition, the application can create <code>support_tickets</code> at runtime if it is missing. The central entities are users, admins, categories, foods, carts, wishlists, orders, order items, payments, coupons, coupon usage, addresses, and system settings.</p>
+
+    <table class="report-table" id="table-3">
+        <tr><th>Table</th><th>Purpose</th></tr>
+        <tr><td><code>users</code>, <code>admins</code></td><td>Store account identities and hashed credentials.</td></tr>
+        <tr><td><code>categories</code>, <code>foods</code></td><td>Store menu structure, item description, price, image path, stock, and availability status.</td></tr>
+        <tr><td><code>carts</code>, <code>cart_items</code></td><td>Persist guest or user cart state and price snapshots.</td></tr>
+        <tr><td><code>wishlists</code>, <code>wishlist_items</code></td><td>Persist guest or user wishlist state.</td></tr>
+        <tr><td><code>addresses</code></td><td>Store user delivery addresses with optional text structure and map coordinates.</td></tr>
+        <tr><td><code>orders</code>, <code>order_items</code></td><td>Store order headers, snapshots, coupon data, delivery times, and refund flags.</td></tr>
+        <tr><td><code>payments</code></td><td>Store gateway, amount, status, transaction reference, and raw gateway responses.</td></tr>
+        <tr><td><code>coupons</code>, <code>coupon_usage</code></td><td>Manage global and private late coupons, limits, ownership, expiry, and redemption records.</td></tr>
+        <tr><td><code>system_settings</code></td><td>Store restaurant latitude/longitude and future runtime settings.</td></tr>
+        <tr><td><code>support_tickets</code></td><td>Runtime-created support table for user issue submission.</td></tr>
+    </table>
+
+    <h3 id="section-3-1-5">3.1.5 Process Modelling</h3>
+    <p class="MsoBodyText">At the process level, the system follows a straightforward but well-validated order lifecycle. Users add items to a cart, authenticate if needed, choose an address, optionally apply a coupon, create an order, complete gateway payment, and then monitor delivery status. The admin confirms or progresses the order, while tracking payloads are continuously derived from route and time state.</p>
+
+    <div class="figure-diagram">
+        <div class="flow-row">
+            <div class="flow-box">Browse Foods</div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-box">Add to Cart / Wishlist</div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-box">Login or Register</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-box">Save / Select Address</div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-box">Apply Coupon</div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-box">Create Order</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-box">Gateway Payment</div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-box">Verify Payment + Deduct Stock</div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-box">Admin Delivery Progress</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-box">Track Order</div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-box">Claim Late Coupon if Eligible</div>
+        </div>
+    </div>
+    <p class="caption" id="figure-2">Figure 2: Checkout, Payment, and Order Confirmation Flow</p>
+    <h2 id="section-3-2">3.2 System Design</h2>
+
+    <h3 id="section-3-2-1">3.2.1 Module Breakdown</h3>
+    <p class="MsoBodyText">The repository is organized by responsibility. Public and role-specific pages live in <code>index.php</code>, <code>track.php</code>, <code>user/</code>, and <code>admin/</code>. Shared business logic is concentrated in <code>components/functions.php</code>. Shared validation, security, request helpers, and upload handling are located in <code>components/helpers.php</code>, while access control and session-guard logic are implemented in <code>components/guards.php</code>. Payment adapters are separated into <code>components/payment/stripe.php</code>, <code>esewa.php</code>, and <code>khalti.php</code>.</p>
+
+    <h3 id="section-3-2-2">3.2.2 Architectural Design</h3>
+    <div class="figure-diagram">
+        <div class="flow-row">
+            <div class="flow-box">User Browser / Admin Browser / Public Tracking View</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-arrow">&darr;</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-box">Apache + PHP Pages<br><span class="tiny">index.php, user/*.php, admin/*.php, track.php</span></div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-arrow">&darr;</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-box">Core Services<br><span class="tiny">helpers.php, guards.php, functions.php</span></div>
+            <div class="flow-box">Payment Adapters<br><span class="tiny">Stripe / eSewa / Khalti</span></div>
+            <div class="flow-box">Tracking Services<br><span class="tiny">OSRM + Haversine fallback + cache</span></div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-arrow">&darr;</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-box">MySQL Database<br><span class="tiny">deliver.sql tables + runtime support_tickets</span></div>
+            <div class="flow-box">Uploads and Local Files<br><span class="tiny">food images, rate-limit files, route cache files</span></div>
+        </div>
+    </div>
+    <p class="caption" id="figure-1">Figure 1: Client-Server Architecture of FOOD SEWA</p>
+
+    <h3 id="section-3-2-3">3.2.3 Database Schema Summary</h3>
+    <p class="MsoBodyText">The schema follows a normalized transactional design. Snapshot tables such as <code>order_items</code> and payment raw responses preserve historical information even if prices or stock change later. Coupon ownership and redemption are modeled separately, allowing both global and private late coupons. The admin and user roles use separate tables rather than a shared discriminator column.</p>
+
+    <h3 id="section-3-2-4">3.2.4 Interface Design</h3>
+    <p class="MsoBodyText">The UI uses server-rendered Bootstrap layouts. The public storefront offers category filtering, add-to-cart and wishlist actions, and checkout entry. Address and restaurant settings pages use Leaflet with OpenStreetMap tiles to capture coordinates. Order tracking uses polling rather than websockets and reveals more data to the order owner than to a public viewer. This dual-visibility design is part of the system's security model, not only its presentation layer.</p>
+
+    <h3 id="section-3-2-5">3.2.5 Algorithms Used in the Project</h3>
+    <div class="note-box">
+        <p class="MsoNormal"><b>Audit basis:</b> the algorithm descriptions below were derived from the implemented logic in <code>components/helpers.php</code>, <code>components/guards.php</code>, <code>components/functions.php</code>, <code>components/payment/*.php</code>, <code>track.php</code>, and the related user/admin pages.</p>
+    </div>
+
+    <h4>Algorithm 1: Session Timeout and Access Guard</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>components/guards.php</code></p>
+    <p class="MsoBodyText">The application maintains both idle timeout and absolute timeout values. Every authenticated request updates the last-seen timestamp, unless either threshold has been exceeded, in which case the session is invalidated and the user is redirected to the correct login page.</p>
+    <div class="algorithm">Input: current session, started_at, last_seen, idle_limit, absolute_limit
+If started_at or last_seen is missing:
+    initialize both timestamps and allow request
+Else if (now - last_seen) &gt; idle_limit:
+    expire session
+Else if (now - started_at) &gt; absolute_limit:
+    expire session
+Else:
+    update last_seen and allow request</div>
+
+    <h4>Algorithm 2: File-Based Rate Limiting</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>components/helpers.php</code></p>
+    <p class="MsoBodyText">Rate limits are stored in JSON files under <code>uploads/.ratelimit</code>. Each bucket key is hashed as <code>sha1(bucket|identifier)</code>, and the file is locked with <code>flock</code> before reading or writing. This creates a lightweight fixed-window counter without requiring Redis or database tables.</p>
+    <div class="algorithm">hash = sha1(bucket + "|" + identifier)
+Open uploads/.ratelimit/hash.json with create mode
+Lock file exclusively
+Read window_start and count
+If current window expired:
+    reset window_start and count
+If count >= maxAttempts:
+    deny request
+Else:
+    increment count and allow
+Write JSON back to file
+Unlock and close</div>
+
+    <h4>Algorithm 3: Guest Cart and Wishlist Merge</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>components/functions.php</code> via <code>merge_guest_state_into_user()</code></p>
+    <p class="MsoBodyText">After login or registration, guest state associated with <code>guest_session_id</code> is merged into the authenticated user's cart and wishlist. Duplicate cart items are merged by summing quantities and capping them at <code>MAX_CART_ITEM_QTY</code>. Duplicate wishlist items are ignored. The guest cart and wishlist containers are removed after merge.</p>
+    <div class="algorithm">Read guest_session_id cookie
+If guest cart exists:
+    For each guest cart item:
+        If same food exists in user cart:
+            newQty = min(existingQty + guestQty, MAX_CART_ITEM_QTY)
+            update existing row
+        Else:
+            insert guest item into user cart
+    delete guest cart
+If guest wishlist exists:
+    For each guest wishlist item:
+        If same food not already in user wishlist:
+            insert it
+    delete guest wishlist</div>
+
+    <h4>Algorithm 4: Address Validation and Normalization</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>components/functions.php</code> via <code>save_user_address()</code></p>
+    <p class="MsoBodyText">Address creation accepts either structured text fields (<code>Address Line 1 + City + Zone</code>) or a map pin (<code>lat/lng</code>). The algorithm validates address naming, coordinates, field length, and allowed characters. If the new address is marked as default, all previous addresses for the same user are first unset inside a transaction.</p>
+    <div class="algorithm">Normalize address_name into Home / Office / Other / custom text
+Validate custom name and address text fields
+Check lat/lng completeness and coordinate bounds
+Require either structured text address or map coordinates
+Start transaction
+If is_default:
+    unset previous default addresses for user
+Insert normalized address row
+Commit transaction</div>
+
+    <h4>Algorithm 5: Coupon Validation and Discount Calculation</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>find_coupon()</code> and <code>calculate_discount()</code> in <code>components/functions.php</code></p>
+    <p class="MsoBodyText">Coupon validation checks format, existence, status, expiry, usage count, and user lock. Discount calculation then computes a percentage-based reduction and caps the discount at the subtotal to avoid negative totals.</p>
+    <div class="algorithm">Normalize coupon code to uppercase
+Reject invalid format
+Fetch coupon by code
+Reject if missing, inactive, expired, exhausted, or locked to another user
+percent = coupon.discount_percent
+discount = round(subtotal * percent / 100, 2)
+discount = min(discount, subtotal)</div>
+
+    <h4>Algorithm 6: Unique Order and Tracking Code Generation</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>random_code()</code>, <code>generate_unique_order_code()</code>, and <code>generate_unique_tracking_number()</code></p>
+    <p class="MsoBodyText">The system uses <code>random_bytes()</code> for randomness and retries up to 10 times to avoid collisions. Order codes use the prefix <code>ORD</code>, while tracking numbers use <code>TRK</code>. Each candidate is checked against the database before acceptance.</p>
+    <div class="algorithm">Repeat up to 10 times:
+    candidate = prefix + UPPERCASE(bin2hex(random_bytes(n)))
+    If candidate not found in corresponding table:
+        return candidate
+If no unique candidate found:
+    throw error</div>
+
+    <h4>Algorithm 7: Order Creation from Cart</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>create_order_from_cart()</code></p>
+    <p class="MsoBodyText">Order creation validates ownership of the selected address, reads cart items, checks item availability and stock, optionally validates a coupon, computes the discount, and stores the order plus snapshot order-items inside a database transaction. Stock is not deducted at this stage because payment may fail.</p>
+    <div class="algorithm">Assert address belongs to user
+Fetch cart items
+Reject empty cart
+For each item:
+    reject inactive food
+    reject if qty &gt; current stock
+    accumulate subtotal
+If coupon code provided:
+    validate coupon
+    if private late coupon and subtotal below min order:
+        reject
+Compute discount and total
+Start transaction
+Generate unique order code
+Insert order row
+Insert snapshot order_items rows
+Commit</div>
+    <h4>Algorithm 8: Payment Verification and Stock Deduction</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>user/payment_success.php</code> and <code>process_payment_success()</code></p>
+    <p class="MsoBodyText">Payment handling is intentionally two-step: the success page verifies gateway responses, then the core function locks the order, prevents reuse of the same transaction reference for another order, records successful payment if needed, verifies stock under lock, deducts stock, updates order payment status, registers coupon usage, and clears the user's cart.</p>
+    <div class="algorithm">Verify gateway response and amount
+Start transaction
+Lock order row FOR UPDATE
+Reject if amount mismatches order total
+Lock existing SUCCESS payment row for same gateway+txn_ref
+If same txn_ref belongs to another order: reject
+If payment not already recorded: insert SUCCESS payment
+If order already PAID: return safely
+Lock ordered food rows FOR UPDATE
+If any stock is insufficient:
+    mark order as PAID + CANCELLED + refund_required
+    commit and return refund_required
+For each item:
+    decrement stock only if enough stock remains
+Generate tracking number if missing
+Mark order PAID
+Register coupon usage if coupon exists
+Clear user's cart
+Commit</div>
+
+    <h4>Algorithm 9: Delivery Status Transition Validation</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>update_delivery_status()</code></p>
+    <p class="MsoBodyText">Delivery states are not freely editable. The algorithm enforces allowed transitions and prevents delivery actions on unpaid orders. It also stamps <code>delivery_start_at</code> when delivery begins and <code>delivered_at</code> when the order reaches the delivered state.</p>
+    <div class="algorithm">Allowed transitions:
+PENDING -&gt; CONFIRMED or CANCELLED
+CONFIRMED -&gt; OUT_FOR_DELIVERY or CANCELLED
+OUT_FOR_DELIVERY -&gt; DELIVERED or CANCELLED
+DELIVERED -&gt; no transition
+CANCELLED -&gt; no transition
+Reject transition if not in allowed set
+Reject OUT_FOR_DELIVERY or DELIVERED if payment_status != PAID
+If moving to OUT_FOR_DELIVERY:
+    set delivery_start_at if null
+If moving to DELIVERED:
+    set delivered_at = NOW()</div>
+
+    <h4>Algorithm 10: Late Coupon Claim Logic</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>late_coupon_claimable_for_order()</code>, <code>generate_private_late_coupon()</code>, and <code>claim_late_coupon_for_order()</code></p>
+    <p class="MsoBodyText">Late coupons are claim-based, not background-generated. The owner must explicitly request them from the tracking endpoint after the configured claim window has elapsed. The system locks the order row, prevents duplicate generation, and issues a user-specific coupon with one allowed use and a seven-day expiry.</p>
+    <div class="algorithm">Lock order row FOR UPDATE
+Reject if order not found or wrong user
+If coupon already generated:
+    return latest private coupon
+Reject unless delivery_status == OUT_FOR_DELIVERY
+Reject if delivered_at exists or delivery_start_at missing
+elapsed = now - delivery_start_at
+If elapsed &lt;= claim_limit:
+    return null
+Generate unique LATE-prefixed coupon
+Mark order.late_coupon_generated = 1
+Commit and return coupon</div>
+
+    <h4>Algorithm 11: Haversine Distance Fallback</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>haversine_distance_m()</code> and <code>fallback_route_data()</code></p>
+    <p class="MsoBodyText">If routing data is unavailable, the system computes a straight-line distance using the Haversine formula, then estimates duration with a fixed average speed of 8.33 meters per second. This guarantees tracking output even when external routing is unavailable.</p>
+    <div class="algorithm">dLat = radians(lat2 - lat1)
+dLng = radians(lng2 - lng1)
+a = sin(dLat/2)^2 + cos(lat1) * cos(lat2) * sin(dLng/2)^2
+c = 2 * atan2(sqrt(a), sqrt(1-a))
+distance = earthRadius * c
+duration = max(60, ceil(distance / 8.33))</div>
+
+    <h4>Algorithm 12: Route Retrieval with Memory and File Cache</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>route_data()</code></p>
+    <p class="MsoBodyText">The route service first checks an in-memory static cache, then a hashed JSON file under <code>uploads/.route_cache_*.json</code>, then calls the OSRM public routing API. If the API fails or returns invalid geometry, the fallback algorithm is used instead. Successful results are written back to the file cache with a six-hour freshness limit.</p>
+    <div class="algorithm">cacheKey = rounded coordinates
+If route exists in static cache:
+    return it
+If route cache file exists and age &lt;= 21600 seconds:
+    decode and return it
+If cURL unavailable:
+    use fallback route and cache it
+Call OSRM API
+If HTTP error or invalid geometry:
+    use fallback route and cache it
+Else:
+    normalize geometry into [lat,lng] path
+    store duration, distance, path, source=osrm
+    cache and return</div>
+
+    <h4>Algorithm 13: Rider Position Interpolation Along a Route</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>point_on_path_by_progress()</code> and <code>tracking_payload()</code></p>
+    <p class="MsoBodyText">The system computes progress as elapsed delivery time divided by route duration. It then walks the polyline segment by segment, measuring segment distances with Haversine, until the target travel distance is reached. The rider point is then linearly interpolated inside that segment. This produces a continuously moving rider marker even though the app does not ingest live GPS packets.</p>
+    <div class="algorithm">If progress &lt;= 0: return first path point
+If progress &gt;= 1: return last path point
+Measure every segment distance on the path
+totalDistance = sum(segmentDistances)
+targetDistance = totalDistance * progress
+Walk segments until cumulativeDistance reaches targetDistance
+ratio = (targetDistance - walkedBeforeSegment) / currentSegmentDistance
+Return interpolated point between segment start and end</div>
+
+    <h4>Algorithm 14: Public vs Owner Tracking Response Shaping</h4>
+    <p class="MsoBodyText"><b>Implemented in:</b> <code>track.php</code> and <code>user/track_order_realtime.php</code></p>
+    <p class="MsoBodyText">The public tracking endpoint supports any valid tracking number but strips sensitive route and coupon metadata when the viewer is not the owner of the order. Owners receive route path, rider coordinates, coupon claimability, and order code; public viewers only receive safe status data. This is a small but important privacy algorithm built into the response layer.</p>
+    <div class="algorithm">Fetch order by tracking number
+Build full tracking payload
+If viewer is owner:
+    include route_path, restaurant, customer, rider, coupon fields, order_code
+Else:
+    remove route_path, restaurant, customer, rider,
+    coupon_due_at, late_coupon_claimed, late_coupon_claimable,
+    late_coupon_claim_minutes, late_coupon_min_order_amount
+Return remaining payload as JSON</div>
+
+    <div class="figure-diagram">
+        <div class="flow-row">
+            <div class="flow-box">Admin marks OUT_FOR_DELIVERY</div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-box">tracking_payload() computes progress, ETA, rider point</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-box">Public track.php hides route-sensitive fields</div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-box">Owner polling endpoint shows full payload</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-box">Elapsed time exceeds claim limit</div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-box">Owner claims private late coupon</div>
+        </div>
+    </div>
+    <p class="caption" id="figure-3">Figure 3: Delivery Tracking and Delayed-Coupon Claim Flow</p>
+</div>
+
+<div class="page page-break">
+    <h1 id="chapter-4">Chapter 4: Implementation and Testing</h1>
+
+    <h2 id="section-4-1">4.1 Implementation</h2>
+
+    <h3>4.1.1 Tools Used</h3>
+    <table class="report-table" id="table-1">
+        <tr><th>Tool / Technology</th><th>Observed Usage in Repository</th></tr>
+        <tr><td>PHP 8.3</td><td>Server-side rendering, business logic, security helpers, payment adapters, tracking endpoints.</td></tr>
+        <tr><td>MySQL 8.4</td><td>Transactional storage for users, catalog, carts, orders, coupons, payments, and settings.</td></tr>
+        <tr><td>Apache via Laragon</td><td>Local development web server with mod_php configuration.</td></tr>
+        <tr><td>Bootstrap 5.3.3</td><td>User and admin interface layout and component styling.</td></tr>
+        <tr><td>Leaflet 1.9.4 + OpenStreetMap</td><td>Interactive map for restaurant and address pinning and route visualization.</td></tr>
+        <tr><td>OSRM Public API</td><td>Route duration and polyline retrieval for delivery tracking.</td></tr>
+        <tr><td>Stripe API</td><td>Checkout session creation and payment verification.</td></tr>
+        <tr><td>eSewa API</td><td>Signed form payload creation and transaction status verification.</td></tr>
+        <tr><td>Khalti API</td><td>Payment initiation and payment lookup verification.</td></tr>
+        <tr><td>phpMyAdmin / SQL Dump</td><td>Schema export and seeded sample data in <code>deliver.sql</code>.</td></tr>
+    </table>
+
+    <h3>4.1.2 Implementation Summary by Module</h3>
+    <table class="report-table">
+        <tr><th>Repository Area</th><th>Responsibility</th></tr>
+        <tr><td><code>index.php</code>, <code>user/foods.php</code></td><td>Food listing, category filter, cart insertion, wishlist toggle.</td></tr>
+        <tr><td><code>user/auth.php</code>, <code>admin/auth.php</code></td><td>Registration/login flows with password hashing, rate limiting, session start, and redirects.</td></tr>
+        <tr><td><code>user/cart.php</code>, <code>user/wishlist.php</code></td><td>Guest/user cart and wishlist mutation pages.</td></tr>
+        <tr><td><code>user/addresses.php</code></td><td>Address capture through structured text or map coordinates.</td></tr>
+        <tr><td><code>user/checkout.php</code>, <code>user/payment*.php</code></td><td>Coupon preview, order placement, gateway handoff, and payment verification.</td></tr>
+        <tr><td><code>user/order.php</code>, <code>track.php</code>, <code>user/track_order_realtime.php</code></td><td>Order history, owner tracking, public tracking, polling, and coupon claim handling.</td></tr>
+        <tr><td><code>admin/dashboard.php</code>, <code>admin/orders.php</code>, <code>admin/delivery_management.php</code></td><td>Operational review of orders, deliveries, refund-required states, and summary metrics.</td></tr>
+        <tr><td><code>admin/categories.php</code>, <code>admin/foods.php</code>, <code>admin/coupons.php</code>, <code>admin/users.php</code>, <code>admin/settings.php</code></td><td>Administration of catalog, coupons, users, and restaurant map coordinates.</td></tr>
+    </table>
+
+    <h3>4.1.3 Security and Validation Controls</h3>
+    <p class="MsoBodyText">The project applies practical server-side safeguards throughout the codebase. Password strength validation enforces uppercase, lowercase, number, special character, and minimum-length rules. Uploaded food images are verified by MIME type, extension, and maximum size before being saved. Coupon codes, tracking numbers, coordinates, names, phone numbers, and order codes all pass through explicit validator functions before use.</p>
+    <p class="MsoBodyText">The system also avoids several common mistakes in simpler student projects. Sensitive payment results are not trusted blindly from the query string; instead, they are reverified by API calls or session-bound identifiers. Delivery cannot begin until payment is marked as paid. Public tracking does not expose customer route geometry. Session fixation risk is reduced through <code>session_regenerate_id(true)</code> after authentication and timeout recovery.</p>
+
+    <h3>4.1.4 Payment and Tracking Integration</h3>
+    <p class="MsoBodyText">Payment flow is split between redirection and verification. Stripe uses checkout sessions, eSewa builds a signed request payload with HMAC-SHA256, and Khalti creates an initiated payment session whose status is later looked up. All three gateways converge into the same transactional payment-success function, ensuring that order state changes are centralized.</p>
+    <p class="MsoBodyText">Tracking flow is likewise centralized. Admins manage delivery states, while the tracking layer derives progress from timestamps and route data. Public and owner views consume the same core payload but receive different field subsets depending on ownership. This keeps tracking behavior consistent while maintaining privacy boundaries.</p>
+    <h2 id="section-4-2">4.2 Testing</h2>
+    <p class="MsoBodyText">The following tables summarize representative test scenarios derived from the code audit. They describe the expected behavior enforced by the implementation and are suitable as functional verification targets for manual or automated testing.</p>
+
+    <h3>4.2.1 Representative Functional Test Cases</h3>
+    <table class="report-table" id="table-5">
+        <tr><th>ID</th><th>Scenario</th><th>Expected Result</th></tr>
+        <tr><td>F-01</td><td>User registers with weak password.</td><td>Registration is rejected by <code>validate_password_strength()</code>.</td></tr>
+        <tr><td>F-02</td><td>User exceeds login retry limit.</td><td>Request is denied by the rate-limit file bucket for <code>user_login</code>.</td></tr>
+        <tr><td>F-03</td><td>User adds more quantity than available stock.</td><td><code>add_to_cart()</code> rejects the request.</td></tr>
+        <tr><td>F-04</td><td>User applies invalid, expired, or foreign coupon.</td><td><code>find_coupon()</code> throws an explicit validation error.</td></tr>
+        <tr><td>F-05</td><td>User tries to save an address without text fields and without map coordinates.</td><td><code>save_user_address()</code> rejects the address.</td></tr>
+        <tr><td>F-06</td><td>Admin tries to mark an unpaid order as out for delivery.</td><td><code>update_delivery_status()</code> throws an error.</td></tr>
+        <tr><td>F-07</td><td>Public viewer opens tracking page for someone else's order.</td><td>Status is visible, but route-sensitive details are removed from the payload.</td></tr>
+        <tr><td>F-08</td><td>User claims late coupon before claim limit.</td><td><code>claim_late_coupon_for_order()</code> returns no coupon.</td></tr>
+    </table>
+
+    <h3>4.2.2 Representative Integration Test Cases</h3>
+    <table class="report-table" id="table-6">
+        <tr><th>ID</th><th>Scenario</th><th>Expected Result</th></tr>
+        <tr><td>I-01</td><td>Guest adds items, then registers.</td><td>Guest cart and wishlist merge into the new user account.</td></tr>
+        <tr><td>I-02</td><td>Stripe returns success for an order.</td><td>Session/order/currency/amount are verified before the order is marked PAID.</td></tr>
+        <tr><td>I-03</td><td>Payment succeeds but stock becomes insufficient before deduction.</td><td>Order is marked <code>refund_required = 1</code> and delivery is cancelled.</td></tr>
+        <tr><td>I-04</td><td>Admin starts delivery; user watches order page.</td><td>Owner polling updates progress and ETA every five seconds.</td></tr>
+        <tr><td>I-05</td><td>OSRM route service is unavailable.</td><td>The system falls back to Haversine distance estimation and still returns tracking data.</td></tr>
+        <tr><td>I-06</td><td>Owner claims a delayed coupon after threshold.</td><td>A unique private late coupon is created, linked to the owner, and marked as generated on the order.</td></tr>
+    </table>
+</div>
+
+<div class="page page-break">
+    <h1 id="chapter-5">Chapter 5: Conclusion and Future Recommendations</h1>
+
+    <h2 id="section-5-1">5.1 Outcomes</h2>
+    <p class="MsoBodyText">The repository delivers a working food-ordering workflow with meaningful backend logic rather than only a visual prototype. The most important outcomes are the transactional order/payment path, role-separated admin and user views, secure authentication controls, verified payment gateway integration, and route-aware delivery tracking. The code also demonstrates that a plain-PHP application can still structure its logic around reusable functions and consistent validation rules.</p>
+    <p class="MsoBodyText">From an academic-report perspective, the biggest outcome of this analysis is that the system's algorithms are identifiable and documentable. The project does not merely mention delayed compensation, route tracking, or payment verification; it actually implements them with concrete conditions, locks, cache layers, and state transitions.</p>
+
+    <h2 id="section-5-2">5.2 Conclusion</h2>
+    <p class="MsoBodyText">FOOD SEWA, previously branded as Foodmandu, is a credible student project because it connects user-facing flows to real backend rules. The repository demonstrates good control over session handling, data validation, cart persistence, payment state management, and delivery-state logic. Its strongest technical areas are the shared business-logic layer in <code>components/functions.php</code> and the way multiple payment gateways are normalized into a single payment-success transaction.</p>
+    <p class="MsoBodyText">At the same time, the project remains intentionally lightweight. It is server-rendered, easy to deploy on a local Laragon setup, and understandable without a framework. That simplicity is a strength in an academic setting because the algorithms and data flow are visible rather than hidden behind framework abstractions.</p>
+
+    <h2 id="section-5-3">5.3 Future Recommendations</h2>
+    <ol class="report-list">
+        <li>Introduce webhook-based asynchronous payment confirmation so that the system does not depend only on browser return URLs.</li>
+        <li>Add a dedicated rider or delivery-agent role with true GPS updates instead of time-based interpolation.</li>
+        <li>Create migrations for runtime-created tables such as <code>support_tickets</code> to remove schema drift.</li>
+        <li>Add search, sorting, and richer order filtering in both the user and admin interfaces.</li>
+        <li>Implement automated tests for validators, coupon flows, payment success transitions, and tracking payload privacy rules.</li>
+        <li>Add notification integrations (email/SMS/push) for payment result, dispatch, and delivery completion.</li>
+        <li>Normalize the project branding so the academic report title and UI brand no longer diverge.</li>
+    </ol>
+</div>
+
+<div class="page page-break">
+    <h1 id="references">References</h1>
+    <p class="MsoNormal">[1] Local repository source file: <code>components/helpers.php</code>.</p>
+    <p class="MsoNormal">[2] Local repository source file: <code>components/guards.php</code>.</p>
+    <p class="MsoNormal">[3] Local repository source file: <code>components/functions.php</code>.</p>
+    <p class="MsoNormal">[4] Local repository source files: <code>components/payment/stripe.php</code>, <code>components/payment/esewa.php</code>, <code>components/payment/khalti.php</code>.</p>
+    <p class="MsoNormal">[5] Local repository source file: <code>track.php</code>.</p>
+    <p class="MsoNormal">[6] Local repository source file: <code>user/track_order_realtime.php</code>.</p>
+    <p class="MsoNormal">[7] Local repository database dump: <code>deliver.sql</code>.</p>
+    <p class="MsoNormal">[8] PHP Manual documentation for sessions, password hashing, cURL, and random bytes.</p>
+    <p class="MsoNormal">[9] MySQL Reference Manual for transactions, indexes, and foreign keys.</p>
+    <p class="MsoNormal">[10] Stripe API documentation for Checkout Session creation and retrieval.</p>
+    <p class="MsoNormal">[11] Khalti developer documentation for ePayment initiate and lookup APIs.</p>
+    <p class="MsoNormal">[12] eSewa ePay integration documentation for signed form submission and transaction status verification.</p>
+    <p class="MsoNormal">[13] Leaflet documentation and OpenStreetMap tile usage guidelines.</p>
+    <p class="MsoNormal">[14] Project OSRM API documentation for route lookup and GeoJSON geometry responses.</p>
+</div>
+
+<div class="page page-break">
+    <h1 id="appendices">Appendices</h1>
+
+    <h2>Appendix A: File Map</h2>
+    <table class="report-table">
+        <tr><th>File / Folder</th><th>Responsibility</th></tr>
+        <tr><td><code>config.php</code></td><td>Environment loading, runtime constants, security headers, bootstrap includes.</td></tr>
+        <tr><td><code>components/db.php</code></td><td>MySQL connection factory.</td></tr>
+        <tr><td><code>components/helpers.php</code></td><td>Validation, rate limiting, CSRF, uploads, pagination, formatting.</td></tr>
+        <tr><td><code>components/guards.php</code></td><td>Session guards, ownership checks, current-user/current-admin loaders.</td></tr>
+        <tr><td><code>components/functions.php</code></td><td>Cart, wishlist, addresses, coupons, orders, payments, tracking, settings, support ticket logic.</td></tr>
+        <tr><td><code>components/payment/</code></td><td>Gateway-specific request/verification functions.</td></tr>
+        <tr><td><code>user/</code></td><td>User-facing pages for auth, shopping, checkout, orders, tracking, profile, support.</td></tr>
+        <tr><td><code>admin/</code></td><td>Admin-facing pages for dashboard, catalog, delivery, users, coupons, settings, payments.</td></tr>
+        <tr><td><code>deliver.sql</code></td><td>Schema and seeded demo data.</td></tr>
+    </table>
+
+    <h2>Appendix B: Core Database Tables from <code>deliver.sql</code></h2>
+    <table class="report-table">
+        <tr><th>Tables Defined in Dump</th></tr>
+        <tr><td><code>addresses</code>, <code>admins</code>, <code>carts</code>, <code>cart_items</code>, <code>categories</code>, <code>coupons</code>, <code>coupon_usage</code>, <code>foods</code>, <code>orders</code>, <code>order_items</code>, <code>payments</code>, <code>system_settings</code>, <code>users</code>, <code>wishlists</code>, <code>wishlist_items</code>.</td></tr>
+    </table>
+    <p class="MsoBodyText">The runtime additionally creates <code>support_tickets</code> when the support feature is used and the table is absent.</p>
+
+    <h2>Appendix C: Algorithm-to-File Mapping</h2>
+    <table class="report-table">
+        <tr><th>Algorithm</th><th>Primary File(s)</th></tr>
+        <tr><td>Session timeout and guard logic</td><td><code>components/guards.php</code></td></tr>
+        <tr><td>Rate limiting</td><td><code>components/helpers.php</code></td></tr>
+        <tr><td>Guest merge</td><td><code>components/functions.php</code></td></tr>
+        <tr><td>Coupon validation and discount</td><td><code>components/functions.php</code></td></tr>
+        <tr><td>Order creation</td><td><code>components/functions.php</code>, <code>user/checkout.php</code></td></tr>
+        <tr><td>Payment verification</td><td><code>components/functions.php</code>, <code>user/payment_success.php</code>, <code>components/payment/*.php</code></td></tr>
+        <tr><td>Delivery state validation</td><td><code>components/functions.php</code>, <code>admin/delivery_management.php</code></td></tr>
+        <tr><td>Route lookup and fallback</td><td><code>components/functions.php</code></td></tr>
+        <tr><td>Live tracking payload</td><td><code>components/functions.php</code>, <code>track.php</code>, <code>user/track_order_realtime.php</code></td></tr>
+        <tr><td>Delayed coupon claim</td><td><code>components/functions.php</code>, <code>user/track_order_realtime.php</code></td></tr>
+    </table>
+</div>
+
+</body>
+</html>
